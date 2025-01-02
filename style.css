@@ -1,45 +1,48 @@
-*{
+* {
     margin: 0;
     padding: 0;
 }
 
-body{
-    /* background-image: url('bg.jpeg'); 
-    background-size: cover; */
-    overflow: hidden;
+body {
+    /* Full-screen wallpaper */
+    background-image: url('bg.jpeg'); /* Replace with your wallpaper URL */
+    background-size: cover;
+    background-position: center;
     height: 100vh;
+    overflow: hidden;
+    position: relative;
 }
 
-.taskbar{
+.taskbar {
     background-color: #f3f3f3;
     width: 100%;
-    position: absolute;
+    position: absolute; /* Positioned relative to the body */
     bottom: 0;
     display: flex;
     z-index: 110;
     justify-content: center;
 }
 
-.startmenu{
-    position: absolute; 
-    /* bottom: 50px; */
-    bottom: -655px;
+.startmenu {
+    position: absolute;
+    bottom: -655px; /* Initially hidden below the screen */
     width: 100%;
     text-align: center;
-    transition: all 0.3s ease-in; 
+    transition: bottom 0.5s ease-in-out; /* Smooth sliding effect */
 }
 
-.startmenu img{
+.startmenu img {
     border-radius: 8px;
 }
 
-.right{
+.right {
     justify-self: flex-end;
     position: absolute;
     right: 0;
     margin: 6px 0;
     height: 85%;
 }  
-.icons{
+
+.icons {
     color: white;
 }
