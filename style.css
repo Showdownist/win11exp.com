@@ -1,42 +1,92 @@
-* {
+*{
     margin: 0;
     padding: 0;
 }
 
-body {
-    /* Full-screen wallpaper */
+body{
+    /* background-image: url('bg.jpeg'); 
+    background-size: cover; */
+    overflow: hidden;
 }
 
-.taskbar {
+.taskbar{
     background-color: #f3f3f3;
     width: 100%;
-    position: absolute; /* Positioned relative to the body */
+    position: absolute;
     bottom: 0;
     display: flex;
     z-index: 110;
     justify-content: center;
 }
 
-.startmenu {
-    position: absolute;
-    bottom: -655px; /* Initially hidden below the screen */
+.startmenu{
+    position: absolute; 
+    /* bottom: 50px; */
+    bottom: -655px;
     width: 100%;
     text-align: center;
-    transition: bottom 0.5s ease-in-out; /* Smooth sliding effect */
+    transition: all 0.3s ease-in; 
 }
 
-.startmenu img {
+.startmenu img{
     border-radius: 8px;
 }
 
-.right {
+.right{
     justify-self: flex-end;
     position: absolute;
     right: 0;
     margin: 6px 0;
     height: 85%;
 }  
-
-.icons {
+.icons{
     color: white;
+}
+.vid2 {
+    display: none;
+}
+.vid{
+    display: block;
+}
+@media screen and (max-width: 1024px) {
+    .taskbar {
+        width: 400px;
+    }
+
+    .vid2{
+        display:block;
+    }
+    .startmenu img {
+        width: 300px;
+    }
+    body {
+        overflow: hidden;
+    }
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow-x: hidden;
+}
+
+/* Taskbar styling */
+.taskbar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%; /* Adjust as per the actual height of your taskbar */
+    z-index: 1000;
+}
+
+/* Main content area */
+.content {
+    padding-bottom: 60px; /* Same as the taskbar height to allow scrolling to the taskbar */
+    height: 100%;
+    overflow-y: auto;
+}
+#vid2 {
+    overflow: hidden;
+    pointer-events: none; /* Optional: Disable interactions like clicking or dragging */
 }
