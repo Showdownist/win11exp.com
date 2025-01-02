@@ -5,12 +5,6 @@
 
 body {
     /* Full-screen wallpaper */
-    background-image: url('bg.jpeg'); /* Replace with your wallpaper URL */
-    background-size: cover;
-    background-position: center;
-    height: 100vh;
-    overflow: hidden;
-    position: relative;
 }
 
 .taskbar {
